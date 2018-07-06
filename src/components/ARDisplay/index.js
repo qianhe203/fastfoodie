@@ -50,7 +50,7 @@ const ObjectCursor = withProjectedPosition()(({ positionProjected }) => {
 
 const { width: windowWidth, height: windowHeight } = Dimensions.get('window');
 
-export default class CameraPane extends Component {
+export default class ARDisplay extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>

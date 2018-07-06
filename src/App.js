@@ -1,11 +1,11 @@
 import { AppRegistry } from 'react-native'
 
-import CameraPane from './camera'
-import PurchasePane from './purchase'
+import CameraScreen from './screens/CameraScreen'
+import PurchaseScreen from './screens/PurchaseScreen'
 
 const FastFoodie = StackNavigator({
-  Camera: { screen: CameraPane },
-  Purchase: { screen: PurchasePane }
+  Camera: { screen: CameraScreen },
+  Purchase: { screen: PurchaseScreen }
 })
 
 AppRegistry.registerComponent('FastFoodie', () => FastFoodie)
