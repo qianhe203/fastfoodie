@@ -1,4 +1,45 @@
+import React, { Component } from 'react';
+import ImagePicker from 'react-native-image-picker';
 import RNTesseractOcr from 'react-native-tesseract-ocr';
+
+class ImageDetection extends Component {
+  state = { isLoading: false, imgSource: null, ocrResult: null }
+
+   detectImage() {
+     this.setState({ isLoading: true });
+     ImagePicker.showImagePicker(options, (response) => {
+       if (response.didCancel || response.error) {
+         this.setState({ isLoading: false });
+       } else {
+         let source = (Platform.OS === 'android') ? { uri: response.uri, isStatic: true } : { uri: response.uri.replace('file://', ''), isStatic: true };
+         this.setState({ imgSource: source }, this.doOcr(response.path));
+       }
+     });
+   }
+
+   doOcr(path) {
+     RNTesseractOcr.recognize(path, 'LANG_ENGLISH', tessOptions)
+       .then((result) => {
+         this.setState({ isLoading: false, ocrResult: result });
+         console.log('OCR Result: ', result);
+       })
+       .catch((err) => {
+         console.log('OCR Error: ', err);
+       })
+       .done();
+   }
+
+   cancelOcr() {
+     RNTesseractOcr.stop()
+       .then((result) => {
+         console.log('OCR Cancellation Result: ', result);
+       })
+       .catch((err) => {
+         console.log('OCR Cancellation Error: ', err);
+       })
+       .done();
+   }
+}
 
 /**
  * @param {string} imgPath - The path of the image.
