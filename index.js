@@ -1,4 +1,4 @@
 // index.ios.js
 // index.android.js
 
-import './src/App'
+import './src/App.js'
