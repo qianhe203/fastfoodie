@@ -138,7 +138,11 @@ export default class ReactNativeARKit extends Component {
             position={{ x: -0.2, y: 0, z: 0 }}
             model={{ file: 'art.scnassets/paneerchili.scn', scale: 0.3 }}
           />
-
+          <ARKit.Model
+            id="object_3"
+            position={{ x: 2, y: 0, z: 0 }}
+            model={{ file: 'art.scnassets/migas.scn', scale: 0.3 }}
+          />
           <ARKit.Light
             position={{ x: 1, y: 3, z: 2 }}
             type={ARKit.LightType.Omni}
