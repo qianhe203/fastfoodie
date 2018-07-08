@@ -10,7 +10,8 @@ class ImageDetection extends Component {
     try {
       const sourceImage = await _getImage();
       this.setState({ sourceImage: sourceImage });
-      const
+      const text = await _translateImage();
+      this.setState({ text: text })
     } catch (error) {
 
     }

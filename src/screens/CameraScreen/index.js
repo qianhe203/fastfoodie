@@ -2,7 +2,7 @@
 import EventEmitter from 'EventEmitter';
 import React, { Component } from 'react';
 
-import { ARDisplay } from '../components/AROverlay'
+import { AROverlay } from '../components/AROverlay'
 import { ImageDetection } from '../components/ImageDetection'
 
 export default class CameraScreen extends Component {
@@ -11,8 +11,8 @@ export default class CameraScreen extends Component {
 
     return (
       <View>
-        <AROverlay eventStream=eventStream/>
-        <ImageDetection eventStream=eventStream/>
+        <AROverlay eventStream={eventStream} />
+        //<ImageDetection eventStream=eventStream/>
       </View>
     );
   }
