@@ -1,16 +1,18 @@
 
-import waterfall from 'async'
+import EventEmitter from 'EventEmitter';
 import React, { Component } from 'react';
 
-import { ARDisplay } from '../components/ARDisplay'
+import { ARDisplay } from '../components/AROverlay'
 import { ImageDetection } from '../components/ImageDetection'
 
 export default class CameraScreen extends Component {
   render() {
+    const eventStream = new EventEmitter();
+
     return (
       <View>
-        <ARDisplay />
-        <BottomBanner />
+        <AROverlay eventStream=eventStream/>
+        <ImageDetection eventStream=eventStream/>
       </View>
     );
   }

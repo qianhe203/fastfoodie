@@ -3,7 +3,19 @@ import ImagePicker from 'react-native-image-picker';
 import RNTesseractOcr from 'react-native-tesseract-ocr';
 
 class ImageDetection extends Component {
-  state = { isLoading: false, imgSource: null, ocrResult: null }
+  state = { isLoading: false }
+
+  detect() {
+    this.setState({ isLoading: true });
+    try {
+      const sourceImage = await _getImage();
+      this.setState({ sourceImage: sourceImage });
+      const
+    } catch (error) {
+
+    }
+    this.setState({ isLoading: false });
+  }
 
    detectImage() {
      this.setState({ isLoading: true });
