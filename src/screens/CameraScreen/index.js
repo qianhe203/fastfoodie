@@ -3,7 +3,7 @@ import EventEmitter from 'EventEmitter';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 
-import { AROverlay } from '../../components/AROverlay'
+import AROverlay from '../../components/AROverlay'
 //import { ImageDetection } from '../../components/ImageDetection'
 
 export default class CameraScreen extends Component {
