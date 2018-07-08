@@ -1,4 +1,5 @@
 import { AppRegistry } from 'react-native'
+import { StackNavigator } from 'react-navigation'
 
 import CameraScreen from './screens/CameraScreen'
 import PurchaseScreen from './screens/PurchaseScreen'
@@ -8,4 +9,4 @@ const FastFoodie = StackNavigator({
   Purchase: { screen: PurchaseScreen }
 })
 
-AppRegistry.registerComponent('FastFoodie', () => FastFoodie)
+AppRegistry.registerComponent('ReactNativeARKit', () => FastFoodie)

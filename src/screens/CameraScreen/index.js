@@ -1,9 +1,10 @@
 
 import EventEmitter from 'EventEmitter';
 import React, { Component } from 'react';
+import { View } from 'react-native';
 
-import { AROverlay } from '../components/AROverlay'
-import { ImageDetection } from '../components/ImageDetection'
+import { AROverlay } from '../../components/AROverlay'
+//import { ImageDetection } from '../../components/ImageDetection'
 
 export default class CameraScreen extends Component {
   render() {
@@ -11,8 +12,7 @@ export default class CameraScreen extends Component {
 
     return (
       <View>
-        <AROverlay eventStream={eventStream} />
-        //<ImageDetection eventStream=eventStream/>
+        <AROverlay /*eventStream={eventStream}*/ />
       </View>
     );
   }
@@ -28,4 +28,5 @@ export default class CameraScreen extends Component {
       },
       this.image // TODO: Properly reference image
     )
+  }
 }
