@@ -134,7 +134,7 @@ export default class AROverlay extends Component {
           <ARKit.Model
             id="object_2"
             position={{ x: -0.2, y: 0, z: 0 }}
-            model={{ file: 'art.scnassets/paneerchili.scn', scale: 0.3 }}
+            model={{ file: '../../../art.scnassets/paneerchili.scn', scale: 0.3 }}
           />
 
           <ARKit.Light
