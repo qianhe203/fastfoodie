@@ -10,6 +10,7 @@ export default class CameraScreen extends Component {
     return (
       <View>
         <ARDisplay />
+        <BottomBanner />
       </View>
     );
   }
