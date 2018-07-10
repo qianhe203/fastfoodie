@@ -9,14 +9,31 @@ import {
 } from 'react-native';
 
 export default class MerchantSignup extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      restaurantName: '',
+      item: '',
+      price: '',
+    }
+  }
   render() {
     return (
       <View style={styles.regform}>
 
         <Text>Merchant Signup</Text>
-        <TextInput style={styles.textinput} placeholder="Restaurant Name" underlineColorAndroid={'transparent'} />
-        <TextInput style={styles.textinput} placeholder="Item" underlineColorAndroid={'transparent'} />
-        <TextInput style={styles.textinput} placeholder="Price" underlineColorAndroid={'transparent'} />        
+        <TextInput 
+          style={styles.textinput} 
+          placeholder="Restaurant Name" 
+          onChangeText={(text) => this.setState({restaurantName})} />
+        <TextInput 
+          style={styles.textinput} 
+          placeholder="Item" 
+          onChangeText={(text) => this.setState({item})}/>
+        <TextInput 
+          style={styles.textinput} 
+          placeholder="Price" 
+          onChangeText={(text) => this.setState({price})} />        
         <TouchableOpacity style={styles.button}>
           <Text style={styles.btntext}>Register my Truck</Text>
         </TouchableOpacity>
