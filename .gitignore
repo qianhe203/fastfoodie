@@ -29,6 +29,8 @@ build/
 .gradle
 local.properties
 *.iml
+*.sublime-project
+*.sublime-workspace
 
 # node.js
 #
