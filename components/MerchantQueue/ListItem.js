@@ -8,11 +8,9 @@ let time = moment().format('LT');
 export default class ItemDetail extends Component {
   render() {
     return (
-      <View>
-      <Card title={`Order #${this.props.ticketNo}`}>
-        <Text>{this.props.item} | {this.props.qty}</Text>
-        <Text>{this.props.person} | {time} </Text>
-      </Card>
+      <View style={{flexDirection:'row', flexWrap:'wrap'}}>
+        <Text >{this.props.item} | </Text>
+        <Text>{this.props.qty}</Text>
       </View>
     );
   }
