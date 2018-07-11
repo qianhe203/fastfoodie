@@ -67,7 +67,7 @@ export default class ReactNativeARKit extends Component {
           <ARKit.Text
             id="object_1"
             text="fastfoodie"
-            position={{ x: 0, y: 0.6, z: 0 }}
+            position={{ x: 0, y: 1, z: 0 }}
             eulerAngles={{ y: 3.14 / 6 }}
             font={{ size: 0.15, depth: 0.05 }}
             material={{ diffuse }}
@@ -81,22 +81,22 @@ export default class ReactNativeARKit extends Component {
           />
           <ARKit.Model
             id="object_2"
-            position={{ x: -.5, y: 0, z: 0 }}
+            position={{ x: -.2, y: .7, z: 0 }}
             model={{ file: 'art.scnassets/paneerchili.dae', scale: 0.05 }}
           />
           <ARKit.Model
             id="object_3"
-            position={{ x: 0, y: .5, z: 0 }}
-            model={{ file: 'art.scnassets/migas.dae', scale: 0.05 }}
+            position={{ x: .1, y: .3, z: 0 }}
+            model={{ file: 'art.scnassets/salad2.dae', scale: 0.05 }}
           />
            <ARKit.Model
             id="object_4"
-            position={{ x: 1, y: 1, z: 0 }}
+            position={{ x: .1, y: .7, z: 0 }}
             model={{ file: 'art.scnassets/pizza.dae', scale: 0.07 }}
           />
            <ARKit.Model
             id="object_5"
-            position={{ x: .5, y: .5, z: .5 }}
+            position={{ x: -.2, y: .3, z: 0 }}
             model={{ file: 'art.scnassets/burger.dae', scale: 0.05 }}
           />
           <ARKit.Light
