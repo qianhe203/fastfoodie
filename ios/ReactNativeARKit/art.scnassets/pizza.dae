@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.79.0 commit date:2018-03-22, commit time:14:10, hash:f4dc9f9</authoring_tool>
     </contributor>
-    <created>2018-07-11T01:08:08</created>
-    <modified>2018-07-11T01:08:08</modified>
+    <created>2018-07-11T03:17:48</created>
+    <modified>2018-07-11T03:17:48</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -164,21 +164,24 @@
     </light>
   </library_lights>
   <library_images>
-    <image id="migas_cropped_jpg" name="migas_cropped_jpg">
-      <init_from>migas_cropped.jpg</init_from>
+    <image id="_burger_jpg" name="_burger_jpg">
+      <init_from>%20burger.jpg</init_from>
+    </image>
+    <image id="pizza1_png" name="pizza1_png">
+      <init_from>pizza1.png</init_from>
     </image>
   </library_images>
   <library_effects>
     <effect id="Material-effect">
       <profile_COMMON>
-        <newparam sid="migas_cropped_jpg-surface">
+        <newparam sid="pizza1_png-surface">
           <surface type="2D">
-            <init_from>migas_cropped_jpg</init_from>
+            <init_from>pizza1_png</init_from>
           </surface>
         </newparam>
-        <newparam sid="migas_cropped_jpg-sampler">
+        <newparam sid="pizza1_png-sampler">
           <sampler2D>
-            <source>migas_cropped_jpg-surface</source>
+            <source>pizza1_png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -190,7 +193,7 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <texture texture="migas_cropped_jpg-sampler"/>
+              <texture texture="pizza1_png-sampler"/>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
@@ -303,7 +306,7 @@
         </extra>
       </node>
       <node id="Cube" name="Cube" type="NODE">
-        <matrix sid="transform">1 0 0 -0.04762004 0 1 0 0.341119 0 0 0.125 -0.1351023 0 0 0 1</matrix>
+        <matrix sid="transform">1 0 0 -0.04762004 0 1 0 0.341119 0 0 0.04500001 -0.1351023 0 0 0 1</matrix>
         <instance_geometry url="#Cube-mesh" name="Cube">
           <bind_material>
             <technique_common>
