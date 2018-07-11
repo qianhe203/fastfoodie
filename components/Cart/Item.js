@@ -2,36 +2,29 @@ import React, { Component } from 'react';
 import { Text, View, FlatList, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const image1 = require('../../assets/orange.jpg');
-const image2 = require('../../assets/tomato.jpg');
-const image3 = require('../../assets/salmon.jpg');
-const image4 = require('../../assets/greens.jpg');
+const image1 = require('../../assets/food-9.jpg');
+const image2 = require('../../assets/burger.jpg');
+const image3 = require('../../assets/fruitsalad.jpg');
 
 const items = [
     {
         id: 1,
         image: image1,
         name: 'Panner Chili',
-        price: 10,
-        amountTaken: 3
+        price: 9,
+        amountTaken: 1
     }, {
         id: 2,
         image: image2,
-        name: 'Tomato',
+        name: 'Burger',
         price: 5,
-        amountTaken: 4
-    }, {
-        id: 3,
-        image: image3,
-        name: 'Salmon fillet',
-        price: 16,
-        amountTaken: 2
+        amountTaken: 1
     }, {
         id: 4,
-        image: image4,
-        name: 'Greens',
+        image: image3,
+        name: 'Fruit Salad',
         price: 3,
-        amountTaken: 3
+        amountTaken: 1
     },
 ];
 
@@ -45,16 +38,12 @@ class Item extends Component {
   }
 
   addItem(item) {
-    console.log('e: ' + item);
-    let items = [...this.state.items];
-    let index = items.findIndex(el => el.name === item.name);
-    let newAmount = item.amountTaken++;
-    let newPrice = newAmount * item.price/newAmount;
-    items[index] = {...items[index], amountTaken: newAmount};
-    items[index] = {...items[index], price: newPrice};
-    // this.setState({
-    //     items: this.state.qty
-    // });
+    console.log(item)
+    // let index = items.findIndex(el => el.name === item.name);
+    // let newAmount = item.amountTaken++;
+    // let newPrice = newAmount * item.price/newAmount;
+    // items[index] = {...items[index], amountTaken: newAmount};
+    // items[index] = {...items[index], price: newPrice};
   }
 
   _renderItem({ item, index }) {
@@ -85,6 +74,7 @@ class Item extends Component {
           backgroundColor='#fff' 
           style={{ borderRadius: 15, backgroundColor: '#bbb', height: 30, width: 30 }} 
           iconStyle={{ marginRight: 0 }}
+          onclick={(e) => this.addItem(e)}
         />
 
         <Text>{item.amountTaken}</Text>
@@ -107,7 +97,7 @@ class Item extends Component {
   render() {
     return (
       <FlatList
-        data={this.state.items}
+        data={items}
         renderItem={this._renderItem}
         keyExtractor={(item) => item.id}
       />

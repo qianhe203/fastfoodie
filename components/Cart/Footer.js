@@ -1,19 +1,20 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Image } from 'react-native';
 import TotalComp from './TotalComponent';
+const visaCheckout = require('../../assets/vco_standard.png');
 
 const Footer = () => {
   const { 
     containerStyle, 
     buttonContainerStyle, 
-    closeButtonStyle, 
-    checkoutButtonStyle } = styles;
+    checkoutButtonStyle,
+    imageStyle} = styles;
   return (
     <View style={containerStyle}>
       <TotalComp />
       <View style={buttonContainerStyle}>
         <View style={checkoutButtonStyle}>
-          <Text style={{ color: '#fff' }}>Go to checkout</Text>
+            <Image source={visaCheckout} style={imageStyle} />
         </View>
       </View>
     </View>
@@ -41,11 +42,14 @@ const styles = {
     borderRadius: 3,
   }, 
   checkoutButtonStyle: {
-    backgroundColor: '#f39c12',
     padding: 10,
     paddingRight: 60,
     paddingLeft: 60,
     borderRadius: 3,
+  },
+  imageStyle: {
+    width: 300,
+    height: 50,
   }
 };
 
