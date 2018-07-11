@@ -7,6 +7,7 @@ import Footer from './Footer';
 const CartContainer = () => {
     return (
         <View style={{ flex: 1 }}>
+            <Header/>
             <ItemsContainer />
             <Footer />
         </View>
