@@ -1,24 +1,45 @@
-import { createBottomTabNavigator, BottomTabBar } from 'react-navigation';
-import React, { Component } from 'react';
 
-//import CameraScreen from '../../screens/CameraScreen';
+import React, { Component } from 'react';
+import { TabNavigator } from 'react-navigation';
+import { Icon } from 'react-native-elements'
+
+import CameraScreen from '../../screens/CameraScreen';
 import MerchantScreen from '../../screens/MerchantScreen';
 
-export default Navigator = createBottomTabNavigator({
+export default Navigator = TabNavigator({
     CameraScreen: {
       screen: CameraScreen,
       navigationOptions: () => ({
-        tabBarIcon({tintColor}) => (
+        tabBarIcon: ({tintColor}) => (
           <Icon
-              name="Camera"
+              name="camera"
+              type="font-awesome"
               color={tintColor}
               size={24}
           />
-      }
+        )
+      })
     },
-    MerchantScreen: { screen: MerchantScreen }
+    MerchantScreen: {
+      screen: MerchantScreen,
+      navigationOptions: () => ({
+        tabBarIcon: ({tintColor}) => (
+          <Icon
+              name="shopping-cart"
+              type="font-awesome"
+              color={tintColor}
+              size={24}
+          />
+        )
+      })
+    }
   }, {
-    title: 'Navigation',
-    initialRouteName: 'MerchantScreen'
+    tabBarPosition: 'bottom',
+    tabBarOptions: {
+      activeTintColor: '#f2f2f2',
+      activeBackgroundColor: '#2EC4B6',
+      inactiveTintColor: '#666',
+      showLabel: false
+    }
   }
 );

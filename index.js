@@ -1,10 +1,10 @@
 // index.ios.js
 
 import { ARKit, withProjectedPosition } from 'react-native-arkit';
-import { AppRegistry, Dimensions, View } from 'react-native';
+import { AppRegistry, Dimensions, Icon, Text, View } from 'react-native';
 import React, { Component } from 'react';
 
-import Navigation from './components/Navigation';
+import Navigator from './components/Navigation';
 
 export default class App extends Component {
   constructor(props, context) {
@@ -17,10 +17,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <View>
-        <Text>Fast Foodie!</Text>
-        <Navigation />
-      </View>
+        <Navigator />
     );
   }
 }
