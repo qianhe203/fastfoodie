@@ -56,7 +56,6 @@ export default class AROverlay extends Component {
       <View style={{ flex: 1 }}>
         <ARKit
           style={{ flex: 1 }}
-          debug
           planeDetection
           lightEstimationEnabled
           onPlaneDetected={console.log} // event listener for plane detection

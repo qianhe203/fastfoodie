@@ -40,7 +40,7 @@ export default Navigator = TabNavigator({
     navigationOptions: () => ({
       tabBarIcon: ({tintColor}) => (
         <Icon
-          name="boxes"
+          name="dollar"
           type="font-awesome"
           color={tintColor}
           size={24}

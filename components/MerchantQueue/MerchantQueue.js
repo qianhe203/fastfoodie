@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
-import ItemDetail from './list';
+import ItemDetail from './ListItem';
 import moment from 'moment';
 import { Card } from 'react-native-elements'; // Version can be specified in package.json
 
