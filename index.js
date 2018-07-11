@@ -82,12 +82,22 @@ export default class ReactNativeARKit extends Component {
           <ARKit.Model
             id="object_2"
             position={{ x: -.5, y: 0, z: 0 }}
-            model={{ file: 'art.scnassets/paneerchili.dae', scale: 0.1 }}
+            model={{ file: 'art.scnassets/paneerchili.dae', scale: 0.05 }}
           />
           <ARKit.Model
-            id="object_4"
+            id="object_3"
             position={{ x: 0, y: .5, z: 0 }}
-            model={{ file: 'art.scnassets/migas.dae', scale: 0.1 }}
+            model={{ file: 'art.scnassets/migas.dae', scale: 0.05 }}
+          />
+           <ARKit.Model
+            id="object_4"
+            position={{ x: 1, y: 1, z: 0 }}
+            model={{ file: 'art.scnassets/pizza.dae', scale: 0.07 }}
+          />
+           <ARKit.Model
+            id="object_5"
+            position={{ x: .5, y: .5, z: .5 }}
+            model={{ file: 'art.scnassets/burger.dae', scale: 0.05 }}
           />
           <ARKit.Light
             position={{ x: 1, y: 3, z: 2 }}
