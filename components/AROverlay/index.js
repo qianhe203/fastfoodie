@@ -70,13 +70,6 @@ export default class AROverlay extends Component {
             font={{ size: 0.15, depth: 0.05 }}
             material={{ diffuse }}
           />
-          <ARKit.Text
-            text="!!"
-            frame="FrontOfCamera"
-            position={{ x: 0, y: 0, z: 0 }}
-            font={{ size: 0.01, depth: 0.002 }}
-            material={{ diffuse: 'blue' }}
-          />
           <ARKit.Model
             id="object_2"
             position={{ x: -.2, y: .7, z: 0 }}
