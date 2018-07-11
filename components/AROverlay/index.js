@@ -65,29 +65,29 @@ export default class AROverlay extends Component {
           <ARKit.Text
             id="object_1"
             text="fastfoodie"
-            position={{ x: 0, y: 1, z: 0 }}
+            position={{ x: 0, y: .9, z: 0 }}
             eulerAngles={{ y: 3.14 / 6 }}
             font={{ size: 0.15, depth: 0.05 }}
             material={{ diffuse }}
           />
           <ARKit.Model
             id="object_2"
-            position={{ x: -.2, y: .7, z: 0 }}
+            position={{ x: -.2, y: .6, z: 0 }}
             model={{ file: 'art.scnassets/paneerchili.dae', scale: 0.05 }}
           />
           <ARKit.Model
             id="object_3"
-            position={{ x: .1, y: .3, z: 0 }}
+            position={{ x: .1, y: .4, z: 0 }}
             model={{ file: 'art.scnassets/salad2.dae', scale: 0.05 }}
           />
            <ARKit.Model
             id="object_4"
-            position={{ x: .1, y: .7, z: 0 }}
+            position={{ x: .1, y: .6, z: 0 }}
             model={{ file: 'art.scnassets/pizza.dae', scale: 0.07 }}
           />
            <ARKit.Model
             id="object_5"
-            position={{ x: -.2, y: .3, z: 0 }}
+            position={{ x: -.2, y: .4, z: 0 }}
             model={{ file: 'art.scnassets/burger.dae', scale: 0.05 }}
           />
           <ARKit.Light
@@ -101,7 +101,7 @@ export default class AROverlay extends Component {
             eulerAngles={{ x: -Math.PI / 2 }}
             spotInnerAngle={45}
             spotOuterAngle={45}
-            color="green"
+            color="blue"
           />
 
           <PlaneCursor
