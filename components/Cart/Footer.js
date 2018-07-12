@@ -48,7 +48,7 @@ const styles = {
     borderRadius: 3,
   },
   imageStyle: {
-    width: 300,
+    width: 250,
     height: 50,
   }
 };
